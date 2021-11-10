@@ -41,9 +41,14 @@ const MyOders = () => {
 
                <div>
 
+
+                    <h1 className="text-center" >Order : {services.length}</h1>
+
                     <div className="row row-cols-1 row-cols-md-2 g-4 mx-4 my-5  ">
                          {
                               services.map((service) => <div className="">
+
+
 
                                    <div className="card    ">
 

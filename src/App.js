@@ -14,6 +14,8 @@ import Find from './Components/explore/Find/Find';
 import Explore from './Components/explore/Explore';
 import PrivatRoute from './Components/PrivatRoute/PrivatRoute';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+import MyOders from './Components/MyOrders/MyOders';
+import makeAdmin from './Components/Dashboard/MakeAmin/MakeAdmin';
 
 function App() {
   return (
@@ -27,9 +29,7 @@ function App() {
           <Route exact path="/Home" >
             <Home></Home>
           </Route>
-          <Route path="/addCar">
-            <AddACar></AddACar>
-          </Route>
+
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -45,6 +45,7 @@ function App() {
           <PrivatRoute path="/dasbord">
             <Dashboard></Dashboard>
           </PrivatRoute>
+
           <Route path="/explore">
             <Explore></Explore>
           </Route>

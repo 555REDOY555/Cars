@@ -17,12 +17,33 @@ import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '@mui/material';
 import MyOders from '../../MyOrders/MyOders';
 
+import {
+     BrowserRouter as Router,
+     Switch,
+     Route,
+     Link,
+     useParams,
+     useRouteMatch
+} from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+import { Nav } from 'react-bootstrap';
+import AddACar from '../../AddCars/AddACar';
+import makeAdmin from '../MakeAmin/MakeAdmin';
+import MakeAdmin from '../MakeAmin/MakeAdmin';
+import Button from '@restart/ui/esm/Button';
+import Calendar from '../Calendar/Calendar';
+import useFirebase from '../../hook/useFirebase';
+
 
 const drawerWidth = 240;
 
 function Dashboard(props) {
      const { window } = props;
      const [mobileOpen, setMobileOpen] = React.useState(false);
+
+     const { admin } = useFirebase()
+
+     let { path, url } = useRouteMatch();
 
      const handleDrawerToggle = () => {
           setMobileOpen(!mobileOpen);
@@ -32,16 +53,24 @@ function Dashboard(props) {
           <div>
                <Toolbar />
                <Divider />
-               <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                         <ListItem button key={text}>
-                              <ListItemIcon>
-                                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                              </ListItemIcon>
-                              <ListItemText primary={text} />
-                         </ListItem>
-                    ))}
-               </List>
+
+               <Nav>
+                    <Nav.Link className="navbar text-dark " as={HashLink} to='/'> <h3><i class="fas fa-house-user me-3"></i></h3>Back to Home</Nav.Link>
+               </Nav>
+               <Nav>
+                    <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/myOrders`}> <h3><i class="fas fa-shopping-cart me-3 "></i></h3> MY ORDERS</Nav.Link>
+               </Nav>
+               {
+                    admin && <Box>
+                         <Nav>
+                              <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/addCar`}> <h3><i class="fas fa-car me-3 "></i></h3> Add a new car</Nav.Link>
+                         </Nav>
+                         <Nav>
+                              <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/makeAdmin`}> <h3><i class="fas fa-user-shield me-3 "></i> </h3> Make Admin</Nav.Link>
+                         </Nav>
+                    </Box>
+
+               }
 
 
           </div>
@@ -73,6 +102,7 @@ function Dashboard(props) {
                               Dasboard
                          </Typography>
                     </Toolbar>
+
                </AppBar>
                <Box
                     component="nav"
@@ -111,9 +141,21 @@ function Dashboard(props) {
                     sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
                >
                     <Toolbar />
-                    <Typography paragraph>
-                         <MyOders></MyOders>
-                    </Typography>
+
+                    <Switch>
+                         <Route exact path={path}>
+                              {/* <Calendar></Calendar> */}
+                         </Route>
+                         <Route path={`${path}/addCar`}>
+                              <AddACar></AddACar>
+                         </Route>
+                         <Route path={`${path}/makeAdmin`}>
+                              <MakeAdmin></MakeAdmin>
+                         </Route>
+                         <Route path={`${path}/myOrders`}>
+                              <MyOders></MyOders>
+                         </Route>
+                    </Switch>
 
                </Box>
           </Box>
