@@ -5,6 +5,7 @@ import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../hook/useFirebase';
 import Button from '@restart/ui/esm/Button';
+import useAuth from '../../hook/useAuth';
 
 const Register = () => {
      const auth = getAuth();
@@ -15,7 +16,7 @@ const Register = () => {
      const [password, setPassword] = useState("");
      const redirect_uri = location.state?.from || '/';
 
-     const { signInUsingGoogle } = useFirebase();
+     const { signInUsingGoogle } = useAuth();
 
 
      const handleEmailChange = e => {

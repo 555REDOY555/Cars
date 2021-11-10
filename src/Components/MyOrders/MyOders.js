@@ -61,7 +61,7 @@ const MyOders = () => {
                                                   }
                                              </h2>
                                              <p>{service?.phone}</p>
-                                             <Link to='' ><Button onClick={() => handleDeleteUser(service._id)} className="btn btn-warning text-center " >DELETE</Button></Link>
+                                             <Link to='' ><Button onClick={() => handleDeleteUser(service._id)} className="btn btn-warning text-center " >Cancel order </Button></Link>
                                         </div>
                                    </div>
                               </div>)

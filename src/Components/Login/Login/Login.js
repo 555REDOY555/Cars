@@ -6,6 +6,7 @@ import Button from '@restart/ui/esm/Button';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../hook/useFirebase';
+import useAuth from '../../hook/useAuth';
 
 
 
@@ -14,7 +15,7 @@ initializeAuthentication()
 
 const Login = () => {
      const auth = getAuth();
-     const { signInUsingGoogle } = useFirebase();
+     const { signInUsingGoogle } = useAuth();
 
 
      const history = useHistory()

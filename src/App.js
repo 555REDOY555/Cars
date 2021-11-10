@@ -16,41 +16,44 @@ import PrivatRoute from './Components/PrivatRoute/PrivatRoute';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import MyOders from './Components/MyOrders/MyOders';
 import makeAdmin from './Components/Dashboard/MakeAmin/MakeAdmin';
+import AuthProvider from './Components/Context/AuthProvider';
 
 function App() {
   return (
     <div>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" >
-            <Home></Home>
-          </Route>
-          <Route exact path="/Home" >
-            <Home></Home>
-          </Route>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" >
+              <Home></Home>
+            </Route>
+            <Route exact path="/Home" >
+              <Home></Home>
+            </Route>
 
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/register">
-            <Register></Register>
-          </Route>
-          <PrivatRoute path="/order/:id">
-            <Order></Order>
-          </PrivatRoute>
-          <PrivatRoute path="/OrderMordal/:id">
-            <OrderMordal></OrderMordal>
-          </PrivatRoute>
-          <PrivatRoute path="/dasbord">
-            <Dashboard></Dashboard>
-          </PrivatRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <PrivatRoute path="/order/:id">
+              <Order></Order>
+            </PrivatRoute>
+            <PrivatRoute path="/OrderMordal/:id">
+              <OrderMordal></OrderMordal>
+            </PrivatRoute>
+            <PrivatRoute path="/dasbord">
+              <Dashboard></Dashboard>
+            </PrivatRoute>
 
-          <Route path="/explore">
-            <Explore></Explore>
-          </Route>
-        </Switch>
-      </Router>
+            <Route path="/explore">
+              <Explore></Explore>
+            </Route>
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

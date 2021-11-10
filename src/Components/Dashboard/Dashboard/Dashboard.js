@@ -18,11 +18,8 @@ import { Typography } from '@mui/material';
 import MyOders from '../../MyOrders/MyOders';
 
 import {
-     BrowserRouter as Router,
      Switch,
      Route,
-     Link,
-     useParams,
      useRouteMatch
 } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
@@ -33,6 +30,8 @@ import MakeAdmin from '../MakeAmin/MakeAdmin';
 import Button from '@restart/ui/esm/Button';
 import Calendar from '../Calendar/Calendar';
 import useFirebase from '../../hook/useFirebase';
+import AdminRoute from '../../AdminRoute/AdminRoute';
+import useAuth from '../../hook/useAuth';
 
 
 const drawerWidth = 240;
@@ -41,7 +40,7 @@ function Dashboard(props) {
      const { window } = props;
      const [mobileOpen, setMobileOpen] = React.useState(false);
 
-     const { admin } = useFirebase()
+     const { admin } = useAuth()
 
      let { path, url } = useRouteMatch();
 
@@ -146,12 +145,12 @@ function Dashboard(props) {
                          <Route exact path={path}>
                               {/* <Calendar></Calendar> */}
                          </Route>
-                         <Route path={`${path}/addCar`}>
+                         <AdminRoute path={`${path}/addCar`}>
                               <AddACar></AddACar>
-                         </Route>
-                         <Route path={`${path}/makeAdmin`}>
+                         </AdminRoute>
+                         <AdminRoute path={`${path}/makeAdmin`}>
                               <MakeAdmin></MakeAdmin>
-                         </Route>
+                         </AdminRoute>
                          <Route path={`${path}/myOrders`}>
                               <MyOders></MyOders>
                          </Route>
