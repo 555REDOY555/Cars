@@ -9,6 +9,9 @@ import Login from './Components/Login/Login/Login';
 import Register from './Components/Login/Register/Register';
 import Order from './Components/Order/Order/Order';
 import OrderMordal from './Components/Order/OrderMordal/OrderMordal';
+import Exprlor from './Components/explore/Explore';
+import Find from './Components/explore/Find/Find';
+import Explore from './Components/explore/Explore';
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
           </Route>
           <Route path="/OrderMordal/:id">
             <OrderMordal></OrderMordal>
+          </Route>
+          <Route path="/explore">
+            <Explore></Explore>
           </Route>
         </Switch>
       </Router>

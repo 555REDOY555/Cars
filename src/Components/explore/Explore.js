@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import AllCar from './Car/AllCar';
+import AllExplore from './AllExplore/AllExplore';
 
-const Cars = () => {
-     const [cars, setCars] = useState([])
+const Explore = () => {
+     const [explore, setexplore] = useState([])
 
 
 
@@ -10,23 +10,19 @@ const Cars = () => {
           fetch(`http://localhost:5000/cars`)
                .then(res => res.json())
                .then(data => {
-                    setCars(data.slice(0, 6));
+                    setexplore(data);
                });
      }, [])
 
-     // console.log(servises)
      return (
           <div>
-               <div>
-                    <h1 className="text-center my-4 text-primary " >Cars</h1>
-               </div>
                <div className="row row-cols-1 row-cols-md-2 g-4 mx-4 my-5">
                     {
-                         cars.map(Car => <AllCar car={Car} ></AllCar>)
+                         explore.map(explore => <AllExplore explore={explore} ></AllExplore>)
                     }
                </div>
           </div>
      );
 };
 
-export default Cars;
+export default Explore;
