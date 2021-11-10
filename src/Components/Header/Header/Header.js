@@ -3,8 +3,11 @@ import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../hook/useAuth';
+import useFirebase from '../../hook/useFirebase';
 
 const Header = () => {
+     const { user, logOut } = useFirebase();
      return (
           <div>
 
@@ -38,7 +41,9 @@ const Header = () => {
                                    } */}
                                    {/* {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>} */}
 
-                                   <Nav.Link className="navbar" as={HashLink} to="">Login</Nav.Link>
+                                   {user.email ?
+                                        <Nav.Link onClick={logOut} className="navbar" as={HashLink} to="">Log-Out</Nav.Link> :
+                                        <Nav.Link className="navbar" as={HashLink} to="/login">Login</Nav.Link>}
 
                               </Nav>
                               <Form className="d-flex flex-fill mx-5">

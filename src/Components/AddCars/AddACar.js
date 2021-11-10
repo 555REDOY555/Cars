@@ -33,9 +33,9 @@ const AddACar = () => {
                     <input placeholder="price" {...register("price", { required: true })} />
                     <input placeholder="desciption" {...register("description", { required: true })} />
                     <input placeholder="img" {...register("img", { required: true })} />
-                    <input type="number" placeholder="Speed" {...register("Top-Speed", { required: true })} />
+                    <input type="number" placeholder="Speed" {...register("TopSpeed", { required: true })} />
                     <input placeholder="Fuel" {...register("Fuel", { required: true })} />
-                    <input placeholder="Body type" {...register("Body type", { required: true })} />
+                    <input placeholder="Body type" {...register("BodyType", { required: true })} />
                     <br />
                     {/* errors will return when field validation fails  */}
                     {errors.exampleRequired && <span>This field is required</span>}
