@@ -12,6 +12,8 @@ import OrderMordal from './Components/Order/OrderMordal/OrderMordal';
 import Exprlor from './Components/explore/Explore';
 import Find from './Components/explore/Find/Find';
 import Explore from './Components/explore/Explore';
+import PrivatRoute from './Components/PrivatRoute/PrivatRoute';
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -34,12 +36,15 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
-          <Route path="/order/:id">
+          <PrivatRoute path="/order/:id">
             <Order></Order>
-          </Route>
-          <Route path="/OrderMordal/:id">
+          </PrivatRoute>
+          <PrivatRoute path="/OrderMordal/:id">
             <OrderMordal></OrderMordal>
-          </Route>
+          </PrivatRoute>
+          <PrivatRoute path="/dasbord">
+            <Dashboard></Dashboard>
+          </PrivatRoute>
           <Route path="/explore">
             <Explore></Explore>
           </Route>

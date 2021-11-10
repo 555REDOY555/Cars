@@ -3,6 +3,8 @@ import { useHistory, useLocation } from 'react-router';
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hook/useFirebase';
+import Button from '@restart/ui/esm/Button';
 
 const Register = () => {
      const auth = getAuth();
@@ -13,7 +15,13 @@ const Register = () => {
      const [password, setPassword] = useState("");
      const redirect_uri = location.state?.from || '/';
 
+     const { signInUsingGoogle } = useFirebase();
+
+
      const handleEmailChange = e => {
+          setEmail(e.target.value)
+     }
+     const handleNameChange = e => {
           setEmail(e.target.value)
      }
      const handlePasswordChange = e => {
@@ -32,7 +40,11 @@ const Register = () => {
                .then((result) => {
                     // Verify(email)
                     console.log(result.user)
+                    // Save user 
+                    SaveUser(email)
+
                     history.push(redirect_uri);
+
                })
                .catch((error) => {
                     setError(error.message);
@@ -49,6 +61,26 @@ const Register = () => {
 
      }
 
+     const handleGoogleLogin = () => {
+          signInUsingGoogle()
+               .then(result => {
+                    history.push(redirect_uri);
+               })
+     }
+
+
+     const SaveUser = (email) => {
+          const user = { email };
+          fetch('http://localhost:5000/users', {
+               method: 'POST',
+               headers: {
+                    'content-type': 'application/json'
+               },
+               body: JSON.stringify(user)
+          })
+               .then()
+
+     }
 
 
      return (
@@ -56,6 +88,12 @@ const Register = () => {
                <h1 className='text-center' >Register</h1>
                <Form onSubmit={handleRegistration} className="m-5" >
 
+                    <div className="row mb-3 ">
+                         <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Your name </label>
+                         <div className="col-sm-10">
+                              <input onBlur={handleNameChange} type="text" className="form-control" id="inputEmail3" required />
+                         </div>
+                    </div>
                     <div className="row mb-3 ">
                          <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
                          <div className="col-sm-10">
@@ -87,10 +125,10 @@ const Register = () => {
 
 
                </Form>
-               {/* <div className="text-center">
-                    <Button onClick={handelGoogleLogIn} className="btn btn-warning text-center " >Sign With Google</Button>
-                    <Button onClick={handleGitHubLogIn} className="btn btn-warning text-center ms-3 " >Sign With GitHub</Button>
-               </div> */}
+               <div className="text-center">
+                    <Button onClick={handleGoogleLogin} className="btn btn-warning text-center " >Sign With Google</Button>
+
+               </div>
           </div>
 
      );

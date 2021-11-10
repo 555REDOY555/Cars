@@ -43,6 +43,10 @@ const Header = () => {
                                    {/* {user.email && <span style={{ color: 'white' }}>Hello {user.displayName} </span>} */}
 
                                    {user.email ?
+                                        <Nav.Link className="navbar" as={HashLink} to="/dasbord">Dasbord</Nav.Link> :
+                                        ''
+                                   }
+                                   {user.email ?
                                         <Nav.Link onClick={logOut} className="navbar" as={HashLink} to="">Log-Out</Nav.Link> :
                                         <Nav.Link className="navbar" as={HashLink} to="/login">Login</Nav.Link>}
 

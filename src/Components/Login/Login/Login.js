@@ -5,6 +5,7 @@ import { Col, Form, Row } from 'react-bootstrap';
 import Button from '@restart/ui/esm/Button';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hook/useFirebase';
 
 
 
@@ -13,6 +14,7 @@ initializeAuthentication()
 
 const Login = () => {
      const auth = getAuth();
+     const { signInUsingGoogle } = useFirebase();
 
 
      const history = useHistory()
@@ -48,6 +50,14 @@ const Login = () => {
                     setError(error.message);
                     // ..
                });
+     }
+
+
+     const handleGoogleLogin = () => {
+          signInUsingGoogle()
+               .then(result => {
+                    history.push(redirect_uri);
+               })
      }
 
      return (
@@ -88,10 +98,10 @@ const Login = () => {
 
                <p className="text-center" >Are you new here <Link to="/register" >Create account</Link></p>
                <div className="text-center">
-                    {/* <div className="text-center">
-                         <Button onClick={handelGoogleLogIn} className="btn btn-warning text-center " >Sign With Google</Button>
-                         <Button onClick={handleGitHubLogIn} className="btn btn-warning text-center ms-3 " >Sign With GitHub</Button>
-                    </div> */}
+                    <div className="text-center">
+                         <Button onClick={handleGoogleLogin} className="btn btn-warning text-center " >Sign With Google</Button>
+
+                    </div>
                </div>
           </div>
      );
