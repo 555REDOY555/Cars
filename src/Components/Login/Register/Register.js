@@ -64,7 +64,10 @@ const Register = () => {
      const handleGoogleLogin = () => {
           signInUsingGoogle()
                .then(result => {
+                    const user = result.user;
+                    SaveUserGoogle(user.email, user.displayName)
                     history.push(redirect_uri);
+
                })
      }
 
@@ -73,6 +76,18 @@ const Register = () => {
           const user = { email };
           fetch('http://localhost:5000/users', {
                method: 'POST',
+               headers: {
+                    'content-type': 'application/json'
+               },
+               body: JSON.stringify(user)
+          })
+               .then()
+
+     }
+     const SaveUserGoogle = (email, displayName) => {
+          const user = { email, displayName };
+          fetch('http://localhost:5000/users', {
+               method: 'PUT',
                headers: {
                     'content-type': 'application/json'
                },
