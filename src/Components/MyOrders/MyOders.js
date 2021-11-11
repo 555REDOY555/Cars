@@ -5,6 +5,7 @@ import useAuth from '../hook/useAuth';
 import useFirebase from '../hook/useFirebase';
 
 const MyOders = () => {
+
      const { user } = useAuth()
      const [orders, setOrders] = useState([]);
      const [users, setUsers] = useState([]);
@@ -48,7 +49,7 @@ const MyOders = () => {
 
                     <div className="row row-cols-1 row-cols-md-2 g-4 mx-4 my-5  ">
                          {
-                              services.map((service) => <div className="">
+                              services.map((service) => <div className="col-md-12 col-12">
 
 
 

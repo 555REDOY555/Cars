@@ -13,6 +13,8 @@ import PrivatRoute from './Components/PrivatRoute/PrivatRoute';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import AuthProvider from './Components/Context/AuthProvider';
 import Footer from './Components/Footer/Footer';
+import Review from './Components/Review/Review';
+import AddAReview from './Components/Review/AddAReview/AddAReview';
 
 function App() {
   return (
@@ -42,6 +44,12 @@ function App() {
             </PrivatRoute>
             <PrivatRoute path="/dasbord">
               <Dashboard></Dashboard>
+            </PrivatRoute>
+            <PrivatRoute path="/review">
+              <Review></Review>
+            </PrivatRoute>
+            <PrivatRoute path="/addreview">
+              <AddAReview></AddAReview>
             </PrivatRoute>
 
             <Route path="/explore">

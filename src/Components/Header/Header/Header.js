@@ -1,9 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import useAuth from '../../hook/useAuth';
 import useFirebase from '../../hook/useFirebase';
 
 const Header = () => {
@@ -44,6 +42,10 @@ const Header = () => {
 
                                    {user.email ?
                                         <Nav.Link className="navbar" as={HashLink} to="/dasbord">Dasbord</Nav.Link> :
+                                        ''
+                                   }
+                                   {user.email ?
+                                        <Nav.Link className="navbar" as={HashLink} to="/review">Review</Nav.Link> :
                                         ''
                                    }
                                    {user.email ?
