@@ -1,19 +1,45 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Carousel } from 'react-bootstrap';
+import './HomeBanner.css'
 
 const HomeBanner = () => {
      return (
           <div>
-               <Card className="bg-dark text-white">
-                    <Card.Img src='https://www.autosbangla.com/images/slider/slider-img1.jpg' alt="Card image" />
-                    <Card.ImgOverlay>
-                         <Card.Title></Card.Title>
-                         <Card.Text>
+               <Carousel variant="dark">
+                    <Carousel.Item>
+                         <img
+                              className="d-block w-100 Carousel-img "
+                              src="https://www.autosbangla.com/images/slider/slider-img1.jpg"
+                              alt="First slide"
+                         />
+                         <Carousel.Caption>
+                              <h5>BMW x1</h5>
 
-                         </Card.Text>
-                         <Card.Text></Card.Text>
-                    </Card.ImgOverlay>
-               </Card>
+                         </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                         <img
+                              className="d-block w-100 Carousel-img "
+                              src="https://www.autosbangla.com/images/mercedes-benz/mercedes-benz-glb-200-img3.jpg"
+                              alt="Second slide"
+                         />
+                         <Carousel.Caption>
+                              <h5>MERCEDES-BENZ GLB 200 </h5>
+
+                         </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                         <img
+                              className="d-block w-100 Carousel-img"
+                              src="https://www.autosbangla.com/images/mercedes-benz/Mercedes-cla-Cla-45-4matic-img3.jpg"
+                              alt="Third slide"
+                         />
+                         <Carousel.Caption>
+                              <h5>MERCEDES-BENZ CLA 45 4MATIC</h5>
+
+                         </Carousel.Caption>
+                    </Carousel.Item>
+               </Carousel>
           </div>
      );
 };
