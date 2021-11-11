@@ -3,7 +3,6 @@ import { useHistory, useLocation } from 'react-router';
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hook/useFirebase';
 import Button from '@restart/ui/esm/Button';
 import useAuth from '../../hook/useAuth';
 

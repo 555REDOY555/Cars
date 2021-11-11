@@ -2,7 +2,7 @@ import { CircularProgress } from '@mui/material';
 import React from 'react';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../hook/useAuth';
-import useFirebase from '../hook/useFirebase';
+
 
 const AdminRoute = ({ children, ...rest }) => {
      const { user, admin, loading } = useAuth();

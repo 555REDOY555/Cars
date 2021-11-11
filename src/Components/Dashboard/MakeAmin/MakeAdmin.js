@@ -3,7 +3,7 @@ import Button from '@restart/ui/esm/Button';
 import React, { useState } from 'react';
 import { Alert } from 'react-bootstrap';
 import useAuth from '../../hook/useAuth';
-import useFirebase from '../../hook/useFirebase';
+
 
 const MakeAdmin = () => {
      const [email, setEmail] = useState('');
@@ -34,9 +34,9 @@ const MakeAdmin = () => {
      }
 
      return (
-          <div>
+          <div className='mb-5' >
                <h2>Make an Admin</h2>
-               <form onSubmit={handleAdminSubmit}>
+               <form className='pb-5' onSubmit={handleAdminSubmit}>
                     <TextField
                          sx={{ width: '50%' }}
                          label="Email"

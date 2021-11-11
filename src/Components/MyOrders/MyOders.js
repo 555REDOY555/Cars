@@ -8,7 +8,7 @@ const MyOders = () => {
      const [orders, setOrders] = useState([]);
      const [users, setUsers] = useState([]);
      const [services, setServices] = useState([])
-     const [isDelete, setIsDelete] = useState(null);
+
 
      const email = user.email;
 

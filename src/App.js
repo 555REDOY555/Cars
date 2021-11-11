@@ -4,19 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header/Header/Header';
 import Home from './Components/Home/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AddACar from './Components/AddCars/AddACar';
 import Login from './Components/Login/Login/Login';
 import Register from './Components/Login/Register/Register';
 import Order from './Components/Order/Order/Order';
 import OrderMordal from './Components/Order/OrderMordal/OrderMordal';
-import Exprlor from './Components/explore/Explore';
-import Find from './Components/explore/Find/Find';
 import Explore from './Components/explore/Explore';
 import PrivatRoute from './Components/PrivatRoute/PrivatRoute';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
-import MyOders from './Components/MyOrders/MyOders';
-import makeAdmin from './Components/Dashboard/MakeAmin/MakeAdmin';
 import AuthProvider from './Components/Context/AuthProvider';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -52,6 +48,7 @@ function App() {
               <Explore></Explore>
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </AuthProvider>
     </div>

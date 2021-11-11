@@ -1,0 +1,26 @@
+.text-decoretor{
+     text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    color: black;
+    
+}
+
+.display{
+     display:flex;
+     
+}
+
+.margin {
+    background-color: #DDDDDD;
+   
+}
+
+.text-decoretor:hover{
+     text-decoration: underline;
+     color: goldenrod
+}
+
+.img img{
+     height: 50%;
+}

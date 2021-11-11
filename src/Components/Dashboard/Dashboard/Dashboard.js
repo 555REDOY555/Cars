@@ -6,12 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import { Typography } from '@mui/material';
@@ -25,13 +19,11 @@ import {
 import { HashLink } from 'react-router-hash-link';
 import { Nav } from 'react-bootstrap';
 import AddACar from '../../AddCars/AddACar';
-import makeAdmin from '../MakeAmin/MakeAdmin';
 import MakeAdmin from '../MakeAmin/MakeAdmin';
-import Button from '@restart/ui/esm/Button';
-import Calendar from '../Calendar/Calendar';
-import useFirebase from '../../hook/useFirebase';
 import AdminRoute from '../../AdminRoute/AdminRoute';
 import useAuth from '../../hook/useAuth';
+import AllOrders from '../AllOrders/AllOrders';
+import ManageCars from '../../ManageCars/ManageCars';
 
 
 const drawerWidth = 240;
@@ -66,6 +58,12 @@ function Dashboard(props) {
                          </Nav>
                          <Nav>
                               <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/makeAdmin`}> <h3><i class="fas fa-user-shield me-3 "></i> </h3> Make Admin</Nav.Link>
+                         </Nav>
+                         <Nav>
+                              <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/AllOrders`}> <h3><i class="fas fa-folder-minus me-3 "></i></h3> Manage All Orders</Nav.Link>
+                         </Nav>
+                         <Nav>
+                              <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/manageCar`}> <h3><i class="fas fa-tasks me-3"></i></h3> Manage All Cars</Nav.Link>
                          </Nav>
                     </Box>
 
@@ -143,13 +141,19 @@ function Dashboard(props) {
 
                     <Switch>
                          <Route exact path={path}>
-                              {/* <Calendar></Calendar> */}
+                              <img className='w-75' src="https://d2kh7o38xye1vj.cloudfront.net/wp-content/uploads/2021/10/banner-tracking.png" alt="" />
                          </Route>
                          <AdminRoute path={`${path}/addCar`}>
                               <AddACar></AddACar>
                          </AdminRoute>
                          <AdminRoute path={`${path}/makeAdmin`}>
                               <MakeAdmin></MakeAdmin>
+                         </AdminRoute>
+                         <AdminRoute path={`${path}/AllOrders`}>
+                              <AllOrders></AllOrders>
+                         </AdminRoute>
+                         <AdminRoute path={`${path}/manageCar`}>
+                              <ManageCars></ManageCars>
                          </AdminRoute>
                          <Route path={`${path}/myOrders`}>
                               <MyOders></MyOders>
