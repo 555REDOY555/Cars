@@ -28,8 +28,8 @@ const Order = () => {
 
           <div>
                <div className="row">
-                    <div className="">
-                         <div className="card    ">
+                    <div className="border border-4">
+                         <div className="card     ">
                               <img src={booking.img} className="card-img-top img-fluid  " alt="..." />
                               <div className="card-body">
                                    <h5 className="card-title">{booking.name}</h5>

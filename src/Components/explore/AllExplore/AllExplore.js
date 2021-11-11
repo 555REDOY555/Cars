@@ -12,7 +12,7 @@ const AllExplore = ({ explore }) => {
                          <img src={img} className="card-img-top img-fluid  " alt="..." />
                          <div className="card-body">
                               <h5 className="card-title">{name}</h5>
-                              <p className="card-text text-primary ">{description}</p>
+                              <p className="card-text text-primary ">{description.slice(0, 200)}</p>
                               <h2 className="text-primary mb-3 " >
                                    {price}
                               </h2>
