@@ -15,7 +15,7 @@ const Order = () => {
 
 
      useEffect(() => {
-          fetch(`http://localhost:5000/cars/${id}`)
+          fetch(`https://vast-hamlet-14167.herokuapp.com/cars/${id}`)
                .then(res => res.json())
                .then(data => setBooking(data))
 

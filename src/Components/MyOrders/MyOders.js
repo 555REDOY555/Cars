@@ -13,7 +13,7 @@ const MyOders = () => {
      const email = user.email;
 
      useEffect(() => {
-          fetch(`http://localhost:5000/myOrders/${email}`)
+          fetch(`https://vast-hamlet-14167.herokuapp.com/${email}`)
                .then((res) => res.json())
                .then((data) => setServices(data));
      }, [email]);
@@ -22,7 +22,7 @@ const MyOders = () => {
      const handleDeleteUser = id => {
           const proceed = window.confirm('Are you sure, you want to delete?');
           if (proceed) {
-               const url = `http://localhost:5000/order/${id}`;
+               const url = `https://vast-hamlet-14167.herokuapp.com/order/${id}`;
                fetch(url, {
                     method: 'DELETE'
                })

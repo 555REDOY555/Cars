@@ -9,7 +9,7 @@ const ManageCars = () => {
      const [users, setUsers] = useState([]);
 
      useEffect(() => {
-          fetch(`http://localhost:5000/Cars`)
+          fetch(`https://vast-hamlet-14167.herokuapp.com/Cars`)
                .then(res => res.json())
                .then(data => {
                     setCar(data);
@@ -19,7 +19,7 @@ const ManageCars = () => {
      const handleDeleteUser = id => {
           const proceed = window.confirm('Are you sure, you want to delete?');
           if (proceed) {
-               const url = `http://localhost:5000/Cars/${id}`;
+               const url = `https://vast-hamlet-14167.herokuapp.com/Cars/${id}`;
                fetch(url, {
                     method: 'DELETE'
                })

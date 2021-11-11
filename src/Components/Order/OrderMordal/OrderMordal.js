@@ -14,7 +14,7 @@ const OrderMordal = () => {
      const { register, reset, handleSubmit, formState: { errors } } = useForm();
      useEffect(() => {
 
-          fetch(`http://localhost:5000/Cars/${id}`)
+          fetch(`https://vast-hamlet-14167.herokuapp.com/Cars/${id}`)
                .then(res => res.json())
                .then(data => setOrder(data))
 
@@ -24,7 +24,7 @@ const OrderMordal = () => {
 
      const onSubmit = data => {
 
-          fetch(`http://localhost:5000/order`, {
+          fetch(`https://vast-hamlet-14167.herokuapp.com/order`, {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

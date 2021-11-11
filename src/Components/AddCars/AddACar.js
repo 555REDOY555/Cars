@@ -7,7 +7,7 @@ const AddACar = () => {
      const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
      const onSubmit = data => {
 
-          fetch(`http://localhost:5000/cars`, {
+          fetch(`https://vast-hamlet-14167.herokuapp.com/cars`, {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

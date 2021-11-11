@@ -6,7 +6,7 @@ const Find = () => {
 
 
      useEffect(() => {
-          fetch(`http://localhost:5000/cars`)
+          fetch(`https://vast-hamlet-14167.herokuapp.com/cars`)
                .then(res => res.json())
                .then(data => {
                     setCars(data.slice(0, 6));
