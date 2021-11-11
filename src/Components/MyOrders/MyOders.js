@@ -1,10 +1,11 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../hook/useAuth';
 import useFirebase from '../hook/useFirebase';
 
 const MyOders = () => {
-     const { user } = useFirebase()
+     const { user } = useAuth()
      const [orders, setOrders] = useState([]);
      const [users, setUsers] = useState([]);
      const [services, setServices] = useState([])
@@ -12,8 +13,9 @@ const MyOders = () => {
 
      const email = user.email;
 
+
      useEffect(() => {
-          fetch(`https://vast-hamlet-14167.herokuapp.com/${email}`)
+          fetch(`https://vast-hamlet-14167.herokuapp.com/myOrders/${email}`)
                .then((res) => res.json())
                .then((data) => setServices(data));
      }, [email]);

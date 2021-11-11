@@ -7,8 +7,9 @@ import useAuth from '../../hook/useAuth';
 
 const MakeAdmin = () => {
      const [email, setEmail] = useState('');
-     const { token } = useAuth();
      const [success, setSuccess] = useState(false);
+     const { token } = useAuth();
+
      const handleOnBlur = e => {
           setEmail(e.target.value);
      }
@@ -32,7 +33,6 @@ const MakeAdmin = () => {
 
           e.preventDefault()
      }
-
      return (
           <div className='mb-5' >
                <h2>Make an Admin</h2>
