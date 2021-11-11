@@ -29,7 +29,6 @@ function App() {
             <Route exact path="/Home" >
               <Home></Home>
             </Route>
-
             <Route path="/login">
               <Login></Login>
             </Route>
