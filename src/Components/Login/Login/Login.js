@@ -15,7 +15,7 @@ initializeAuthentication()
 
 const Login = () => {
      const auth = getAuth();
-     const { signInUsingGoogle } = useAuth();
+     const { signInUsingGoogle, user } = useAuth();
 
 
      const history = useHistory()
@@ -57,8 +57,23 @@ const Login = () => {
      const handleGoogleLogin = () => {
           signInUsingGoogle()
                .then(result => {
+                    const user = result.user;
+                    SaveUserGoogle(user.email, user.displayName)
                     history.push(redirect_uri);
                })
+     }
+
+     const SaveUserGoogle = (email, displayName) => {
+          const user = { email, displayName };
+          fetch('https://vast-hamlet-14167.herokuapp.com/users', {
+               method: 'PUT',
+               headers: {
+                    'content-type': 'application/json'
+               },
+               body: JSON.stringify(user)
+          })
+               .then()
+
      }
 
      return (
