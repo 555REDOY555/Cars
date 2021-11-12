@@ -30,10 +30,11 @@ import Pay from '../Pay/Pay';
 const drawerWidth = 240;
 
 function Dashboard(props) {
+
      const { window } = props;
      const [mobileOpen, setMobileOpen] = React.useState(false);
 
-     const { admin } = useAuth()
+     const { admin, logOut } = useAuth()
 
      let { path, url } = useRouteMatch();
 
@@ -53,8 +54,9 @@ function Dashboard(props) {
                     <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/myOrders`}> <h3><i class="fas fa-shopping-cart me-3 "></i></h3> MY ORDERS</Nav.Link>
                </Nav>
                <Nav>
-                    <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/pay`}> <h3><i class="fas fa-shopping-cart me-3 "></i></h3> MY PAY</Nav.Link>
+                    <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/pay`}> <h3><i class="far fa-credit-card me-3 "></i></h3>PAY</Nav.Link>
                </Nav>
+
                {
                     admin && <Box>
                          <Nav>
@@ -72,6 +74,9 @@ function Dashboard(props) {
                     </Box>
 
                }
+               <Nav>
+                    <Nav.Link onClick={logOut} className="navbar text-dark" as={HashLink} to={`${url}`}> <h3><i class="fas fa-sign-out-alt me-3"></i></h3>Log-Out</Nav.Link>
+               </Nav>
 
 
           </div>
