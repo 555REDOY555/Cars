@@ -53,7 +53,7 @@ const MyOders = () => {
 
 
 
-                                   <div className="card    ">
+                                   <div className="card  border border-4  ">
 
                                         <div className="card-body">
                                              <h5 className="card-title">{service?.name}</h5>

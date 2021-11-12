@@ -24,6 +24,7 @@ import AdminRoute from '../../AdminRoute/AdminRoute';
 import useAuth from '../../hook/useAuth';
 import AllOrders from '../AllOrders/AllOrders';
 import ManageCars from '../../ManageCars/ManageCars';
+import Pay from '../Pay/Pay';
 
 
 const drawerWidth = 240;
@@ -50,6 +51,9 @@ function Dashboard(props) {
                </Nav>
                <Nav>
                     <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/myOrders`}> <h3><i class="fas fa-shopping-cart me-3 "></i></h3> MY ORDERS</Nav.Link>
+               </Nav>
+               <Nav>
+                    <Nav.Link className="navbar text-dark" as={HashLink} to={`${url}/pay`}> <h3><i class="fas fa-shopping-cart me-3 "></i></h3> MY PAY</Nav.Link>
                </Nav>
                {
                     admin && <Box>
@@ -157,6 +161,9 @@ function Dashboard(props) {
                          </AdminRoute>
                          <Route path={`${path}/myOrders`}>
                               <MyOders></MyOders>
+                         </Route>
+                         <Route path={`${path}/pay`}>
+                              <Pay></Pay>
                          </Route>
                     </Switch>
 

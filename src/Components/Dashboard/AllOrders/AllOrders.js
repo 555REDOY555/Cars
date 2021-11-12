@@ -38,9 +38,9 @@ const AllOrders = () => {
      }
      return (
           <div>
-               <div className="row row-cols-1 row-cols-md-2 g-4 mx-4 my-5  ">
+               <div className="row row-cols-1 row-cols-md-2 g-4  mx-4 my-5   ">
                     {
-                         Order.map((order) => <div className="card    ">
+                         Order.map((order) => <div className="card border border-4   ">
 
                               <div className="card-body">
                                    <h5 className="card-title"> NAME : {order?.name}</h5>

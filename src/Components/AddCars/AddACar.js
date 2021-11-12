@@ -49,7 +49,7 @@ const AddACar = () => {
                               </form>
                          </div>
                          <div className="col-md-6 col-12 ">
-                              <img src="https://image.freepik.com/free-vector/city-driver-concept-illustration_114360-1209.jpg" alt="" />
+                              <img className='w-100' src="https://image.freepik.com/free-vector/city-driver-concept-illustration_114360-1209.jpg" alt="" />
                          </div>
                     </div>
                </Container>
