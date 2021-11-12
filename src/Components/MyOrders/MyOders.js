@@ -63,7 +63,11 @@ const MyOders = () => {
                                                   {service?.service
                                                   }
                                              </h2>
-                                             <p>{service?.phone}</p>
+
+                                             <p> phone : {service?.phone}</p>
+
+                                             <p className='px-4 text-white btn  btn-success m-4 ' >{service?.process
+                                             }</p>
                                              <Link to='' ><Button onClick={() => handleDeleteUser(service._id)} className="btn btn-warning text-center " >Cancel order </Button></Link>
                                         </div>
                                    </div>
