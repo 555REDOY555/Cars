@@ -62,6 +62,8 @@ const OrderMordal = () => {
                                    <input placeholder="Address" defaultValue="" {...register("address", { required: true })} />
                                    <input placeholder="City" defaultValue="" {...register("city", { required: true })} />
                                    <input placeholder="phone number" defaultValue="" {...register("phone", { required: true })} />
+                                   <input placeholder="City" defaultValue="" {...register("city", { required: true })} />
+                                   <input placeholder="" defaultValue="Painding" {...register("pro", { required: true })} />
 
                                    <input type="submit" />
                               </form>
