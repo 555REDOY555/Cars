@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Find = () => {
-     const [cars, setCars] = useState([])
+     const [, setCars] = useState([])
 
 
 
@@ -15,7 +15,7 @@ const Find = () => {
 
      return (
           <div>
-
+                    <h1>hi</h1>
           </div>
      );
 };

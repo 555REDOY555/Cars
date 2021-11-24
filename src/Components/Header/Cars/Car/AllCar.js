@@ -18,6 +18,7 @@ const AllCar = ({ car }) => {
                                    <h2 className="text-primary mb-3 " >
                                         {price}
                                    </h2>
+                         
                                    <Link to={`/order/${_id}`} ><Button className="btn btn-warning" >Book</Button></Link>
                               </div>
                          </div>
