@@ -16,7 +16,7 @@ const MyOders = () => {
 
 
      useEffect(() => {
-          fetch(`https://vast-hamlet-14167.herokuapp.com/myOrders/${email}`)
+          fetch(`https://guarded-crag-51137.herokuapp.com/myOrders/${email}`)
                .then((res) => res.json())
                .then((data) => setServices(data));
      }, [email]);
@@ -25,7 +25,7 @@ const MyOders = () => {
      const handleDeleteUser = id => {
           const proceed = window.confirm('Are you sure, you want to delete?');
           if (proceed) {
-               const url = `https://vast-hamlet-14167.herokuapp.com/order/${id}`;
+               const url = `https://guarded-crag-51137.herokuapp.com/order/${id}`;
                fetch(url, {
                     method: 'DELETE'
                })

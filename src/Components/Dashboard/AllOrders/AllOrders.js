@@ -13,7 +13,7 @@ const AllOrders = () => {
 
 
      useEffect(() => {
-          fetch(`https://vast-hamlet-14167.herokuapp.com/order`)
+          fetch(`https://guarded-crag-51137.herokuapp.com/order`)
                .then(res => res.json())
                .then(data => {
                     setOrder(data);
@@ -22,7 +22,7 @@ const AllOrders = () => {
      const handleDeleteUser = id => {
           const proceed = window.confirm('Are you sure, you want to delete?');
           if (proceed) {
-               const url = `https://vast-hamlet-14167.herokuapp.com/order/${id}`;
+               const url = `https://guarded-crag-51137.herokuapp.com/order/${id}`;
                fetch(url, {
                     method: 'DELETE'
                })

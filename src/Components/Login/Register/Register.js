@@ -74,7 +74,7 @@ const Register = () => {
 
      const SaveUser = (email) => {
           const user = { email };
-          fetch('https://vast-hamlet-14167.herokuapp.com/users', {
+          fetch('https://guarded-crag-51137.herokuapp.com/users', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'
@@ -86,7 +86,7 @@ const Register = () => {
      }
      const SaveUserGoogle = (email, displayName) => {
           const user = { email, displayName };
-          fetch('https://vast-hamlet-14167.herokuapp.com/users', {
+          fetch('https://guarded-crag-51137.herokuapp.com/users', {
                method: 'PUT',
                headers: {
                     'content-type': 'application/json'

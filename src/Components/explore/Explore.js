@@ -7,7 +7,7 @@ const Explore = () => {
 
 
      useEffect(() => {
-          fetch(`https://vast-hamlet-14167.herokuapp.com/cars`)
+          fetch(`https://guarded-crag-51137.herokuapp.com/cars`)
                .then(res => res.json())
                .then(data => {
                     setexplore(data);

@@ -7,7 +7,7 @@ const AddACar = () => {
      const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
      const onSubmit = data => {
 
-          fetch(`https://vast-hamlet-14167.herokuapp.com/cars`, {
+          fetch(`https://guarded-crag-51137.herokuapp.com/cars`, {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'

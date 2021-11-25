@@ -15,7 +15,7 @@ const AddAReview = () => {
 
      const onSubmit = data => {
 
-          fetch(`https://vast-hamlet-14167.herokuapp.com/Review`, {
+          fetch(`https://guarded-crag-51137.herokuapp.com/Review`, {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'
