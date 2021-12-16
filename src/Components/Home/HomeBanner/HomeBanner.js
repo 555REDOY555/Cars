@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import './HomeBanner.css'
 
 const HomeBanner = () => {

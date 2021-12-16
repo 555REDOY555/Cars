@@ -1,5 +1,5 @@
 import React from 'react';
-import AddAReview from './AddAReview/AddAReview';
+
 import AllReviews from './AllReviews/AllReviews';
 
 const Review = () => {

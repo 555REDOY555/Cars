@@ -10,49 +10,49 @@ const Footer = () => {
                          <div className="col-md-4 col-6 ">
 
                               <h5>About</h5>
-                              <a className="text-decoretor" href="">How We works</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">How We works</a>
 
-                              <a className="text-decoretor" href="">Newsroom</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Newsroom</a>
 
-                              <a className="text-decoretor" href="">Investors</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Investors</a>
 
-                              <a className="text-decoretor" href="">HotelTonight</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">HotelTonight</a>
 
-                              <a className="text-decoretor" href="">Airbnb for Work</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Airbnb for Work</a>
 
-                              <a className="text-decoretor" href="">Made possible by Hosts</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Made possible by Hosts</a>
 
                          </div>
                          <div className="col-md-4 col-6">
 
                               <h5>COMMUNITY</h5>
-                              <a className="text-decoretor" href="">Diversity & Belonging</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Diversity & Belonging</a>
 
-                              <a className="text-decoretor" href="">Against Discrimination</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Against Discrimination</a>
 
-                              <a className="text-decoretor" href="">Accessibility</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Accessibility</a>
 
-                              <a className="text-decoretor" href="">Airbnb Associates</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Airbnb Associates</a>
 
-                              <a className="text-decoretor" href="">Host Afghan refugees</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Host Afghan refugees</a>
 
-                              <a className="text-decoretor" href="">Guest Referrals</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Guest Referrals</a>
 
                          </div>
                          <div className="col-md-4 col-6">
 
                               <h5>HOST</h5>
-                              <a className="text-decoretor" href="">Host your home</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Host your home</a>
 
-                              <a className="text-decoretor" href="">Host an Online Experience</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Host an Online Experience</a>
 
-                              <a className="text-decoretor" href="">Host an Experience</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Host an Experience</a>
 
-                              <a className="text-decoretor" href="">Responsible hosting</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Responsible hosting</a>
 
-                              <a className="text-decoretor" href="">Resource Center</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Resource Center</a>
 
-                              <a className="text-decoretor" href="">Community Center</a>
+                              <a className="text-decoretor" href="https://cars-a30a7.web.app/">Community Center</a>
 
                          </div>
 

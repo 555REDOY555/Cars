@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, getIdToken, signOut } from "firebase/auth";
+import  { useEffect, useState } from 'react';
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, getIdToken, signOut } from "firebase/auth";
 import initializeAuthentication from '../Login/Firebase/Firebaseinit';
 
 
@@ -46,7 +46,7 @@ const useFirebase = () => {
                setLoading(false);
           });
           return () => unsubscribe;
-     }, [])
+     }, )
 
      //  user state
      useEffect(() => {

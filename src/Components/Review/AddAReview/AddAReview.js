@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
+
 import useAuth from '../../hook/useAuth';
 
 const AddAReview = () => {
-     const { id } = useParams();
+
      const { user } = useAuth()
-     const [order, setOrder] = useState()
+    
      const { register, reset, handleSubmit, formState: { errors } } = useForm();
 
 

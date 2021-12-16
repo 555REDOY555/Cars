@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import OrderMordal from '../OrderMordal/OrderMordal';
+
 
 const Order = () => {
      const { id } = useParams();
@@ -20,7 +20,7 @@ const Order = () => {
                .then(res => res.json())
                .then(data => setBooking(data))
 
-     }, [])
+     },)
      console.log(id)
 
      // console.log(Order)

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../hook/useAuth';
+
 import BTN from '../BTN';
 
 const AllReviews = () => {
-     const { user } = useAuth()
+    
      const [Review, setReview] = useState([]);
 
      useEffect(() => {

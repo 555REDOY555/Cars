@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Button from '@restart/ui/esm/Button';
@@ -53,13 +53,13 @@ const Register = () => {
      }
 
 
-     const Verify = (email) => {
-          sendEmailVerification(auth, email)
-               .then(() => {
+     // const Verify = (email) => {
+     //      sendEmailVerification(auth, email)
+     //           .then(() => {
 
-               });
+     //           });
 
-     }
+     // }
 
      const handleGoogleLogin = () => {
           signInUsingGoogle()

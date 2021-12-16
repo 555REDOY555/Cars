@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import './AddACar.css'
 
 const AddACar = () => {
-     const { register, reset, handleSubmit, watch, formState: { errors } } = useForm();
+     const { register, reset, handleSubmit, formState: { errors } } = useForm();
      const onSubmit = data => {
 
           fetch(`https://guarded-crag-51137.herokuapp.com/cars`, {
