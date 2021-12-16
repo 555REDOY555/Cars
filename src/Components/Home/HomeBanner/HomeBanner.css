@@ -1,3 +1,12 @@
-.Carousel-img img {
-     height: 50% !important;
-}
+
+.carousel .item {
+     height: 500px;
+   }
+   
+   .item img {
+       position: absolute;
+       object-fit:cover;
+       top: 0;
+       left: 0;
+       min-height: 500px;
+   }

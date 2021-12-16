@@ -5,9 +5,9 @@ import './HomeBanner.css'
 const HomeBanner = () => {
      return (
           <div>
-               <Carousel variant="dark">
-                    <Carousel.Item>
-                         <img
+               <Carousel variant="dark ">
+                    <Carousel.Item style={{"height": "700px"}} >
+                         <img  style={{"height": "100%"}}
                               className="d-block w-100 Carousel-img "
                               src="https://www.autosbangla.com/images/slider/slider-img1.jpg"
                               alt="First slide"
@@ -17,8 +17,8 @@ const HomeBanner = () => {
 
                          </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
-                         <img
+                    <Carousel.Item style={{"height": "700px"}} >
+                         <img style={{"height": "100%"}}
                               className="d-block w-100 Carousel-img "
                               src="https://www.autosbangla.com/images/mercedes-benz/mercedes-benz-glb-200-img3.jpg"
                               alt="Second slide"
@@ -28,8 +28,8 @@ const HomeBanner = () => {
 
                          </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
-                         <img
+                    <Carousel.Item style={{"height": "700px"}} >
+                         <img style={{"height": "100%"}}
                               className="d-block w-100 Carousel-img"
                               src="https://www.autosbangla.com/images/mercedes-benz/Mercedes-cla-Cla-45-4matic-img3.jpg"
                               alt="Third slide"
